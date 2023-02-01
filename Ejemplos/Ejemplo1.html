@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- La información interna -->
+    <!-- utf-8 - la codificación más común -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Clase 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="#">
+                <img src="../images/logo.png" alt="logo" width="600" />
+            </a>
+        </div>
+    </header>
+    <nav>
+        <h2 id="inicio">Indice</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Regresar a Menu Inicio</a></li>
+                <li><a href="#texto">Texto de Prueba</a></li>
+                <li><a href="#receta">Como hacer té</a></li>
+                <li><a href="#lista">Pruebas Listas</a></li>
+                <li><a href="#enlaces">Enlaces</a></li>
+            </ul>
+        </nav>
+    </nav>
+
+    <div>
+        <!-- Contenido -->
+        <h3 id="texto">Texto de Prueba</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatum quisquam quasi nobis rerum animi quod impedit nulla facere laborum dolor unde,
+            incidunt voluptates dignissimos, veritatis eum numquam culpa. Hic consequatur facilis
+            dolorum eos veritatis, assumenda optio omnis voluptatibus impedit blanditiis iusto quis,
+            architecto et, modi soluta.
+            Optio vero obcaecati voluptas.</p>
+    </div>
+    <div>
+        <h3 id="receta">Cómo hacer té</h3>
+        <p>¡Instrucciones paso a paso para Dummies, solo repite y tendrás éxito!</p>
+
+        <ol>
+            <li>Hervir el agua</li>
+            <li>Verter el té en una taza</li>
+            <li>Verter en la taza agua hirviendo</li>
+            <li>Esperar 10 minutos,luego se puede beber</li>
+        </ol>
+    </div>
+
+    <div>
+        <h3 id="lista">Pruebas de Listas</h3>
+        <ul>
+            <li>
+                Computadoras y componentes
+                <ul>
+                    <li>Procesadores</li>
+                    <li>Monitores</li>
+                    <li>Tarjetas gráficas</li>
+                </ul>
+            </li>
+            <li>
+                Electrodomésticos
+                <ul>
+                    <li>Neveras</li>
+                    <li>Televisores</li>
+                    <li>Lavadoras</li>
+                </ul>
+            </li>
+            <li>
+                Productos del hogar
+                <ul>
+                    <li>Sillones</li>
+                    <li>Colchones</li>
+                    <li>Chimeneas eléctricas</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h3 id="enlaces">Pruebas de Enlaces externos</h3>
+        <il><a href="https://www.youtube.com/watch?v=989-7xsRLR4" target="_blank" rel="noreferrer noopener"> Test </a>
+            <!--Abre el link en una pestaña nueva-->
+        </il>
+        <il>
+            <!-- Llamar al número de teléfono -->
+            <a href="tel:3142594188">3142594188</a>
+        </il>
+        <il>
+            <!-- Enviar correo a la dirección de correo electrónico  -->
+            <a href="mailto:jhovanndress.01@gmail.com">jhovanndress.01@gmail.com</a>
+        </il>
+    </div>
+
+
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+        <header>
+            <h3 itemprop="headline">The Very First Rule of Life</h3>
+            <p><time itemprop="datePublished" datetime="2009-10-09">3 days ago</time></p>
+            <link itemprop="url" href="?comments=0">
+        </header>
+        <p>If there's a microphone anywhere near you, assume it's hot and
+            sending whatever you're saying to the world. Seriously.</p>
+        <p>...</p>
+        <section>
+            <h3>Comments</h3>
+            <article itemprop="comment" itemscope itemtype="http://schema.org/Comment" id="c1">
+                <link itemprop="url" href="#c1">
+                <footer>
+                    <p>Posted by: <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                            <span itemprop="name">George Washington</span>
+                        </span></p>
+                    <p><time itemprop="dateCreated" datetime="2009-10-10">15 minutes ago</time></p>
+                </footer>
+                <p>Yeah! Especially when talking about your lobbyist friends!</p>
+            </article>
+            <article itemprop="comment" itemscope itemtype="http://schema.org/Comment" id="c2">
+                <link itemprop="url" href="#c2">
+                <footer>
+                    <p>Posted by: <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                            <span itemprop="name">George Hammond</span>
+                        </span></p>
+                    <p><time itemprop="dateCreated" datetime="2009-10-10">5 minutes ago</time></p>
+                </footer>
+                <p>Hey, you have the same first name as me.</p>
+            </article>
+        </section>
+    </article>
+
+    <div>
+        <figure>
+            <img src="https://concepto.de/wp-content/uploads/2014/08/programacion-2-e1551291144973.jpg" alt="codigo"
+                width="200" />
+            <figcaption>
+                Imagen de una pantalla de código
+            </figcaption>
+        </figure>
+    </div>
+
+    <div>
+        <a href="https://www.gamerfocus.co/juegos/pokemon-lo-que-esta-oculto-frente-a-nosotros/">
+            <img src="https://i0.wp.com/gamerfocus.co/wp-content/uploads/2015/02/Pokemon-1.png?ssl=1" alt="cubone"
+                width="200" />
+        </a>
+    </div>
+
+
+</body>
+<footer>
+    <p>
+        <a href="../index.html">Regresar</a>
+    </p>
+</footer>
+
+</html>
