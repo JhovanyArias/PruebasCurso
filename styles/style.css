@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     /* background-color:rgb(197, 197, 197); */
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(207, 207, 204, 0.842)5)),
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(207, 207, 204, 0.842)5),
             url("./images/fondo.png");;
     color: black;
 }
