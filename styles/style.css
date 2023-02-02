@@ -1,15 +1,25 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-color:rgb(197, 197, 197); */
-    background-image: linear-gradient(rgb(255, 255, 255), rgba(207, 207, 204, 0.842)5),
-            url("./images/fondo.png");;
-    color: black;
+    padding-top: 80px;
+    background-image: url("../images/fondo.png"); 
 }
 
-h1 {
-    font-family: Tahoma;
-}
+.main-header {
+    background-color: black;
+            background: #333;
+            color: white;
+            height: 80px;
+            width: 100%;
+            /* hacemos que la cabecera ocupe el ancho completo de la página */
+            left: 0;
+            /* Posicionamos la cabecera al lado izquierdo */
+            top: 0;
+            /* Posicionamos la cabecera pegada arriba */
+            position: fixed;
+            /* Hacemos que la cabecera tenga una posición fija */
+        }
+
 
 .contenedor {
     position: relative;
@@ -17,14 +27,32 @@ h1 {
     text-align: left;
 }
 
-
 .centrado {
     position: absolute;
     top: 50%;
     left: 125%;
     transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
 }
 
-body {
-    background-image: url("../images/fondo.png");
+.cuadrado {
+    width: auto;
+    height: fit-content;
+    background-color: black;
+    background: #333;    border: 1px solid rgba(165, 165, 165, 0.678);
+    text-align: center;
+}
+
+.textoatajo {
+    font-size: larger;
+    color: #000;
+}
+
+.encabezado {
+    font-size: xx-large;
+    color: #000;
+}
+.tabla {
+    font-size: larger;
+    background-color: white;
 }
