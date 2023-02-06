@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/style.css"></head>
+    <title>Clase 2</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
 <body>
     <header class="main-header">
         <a href="../index.html">
@@ -17,6 +17,143 @@
         </div>
         </div>
     </header>
-    <a href="../index.html">Regresar</a>
+
+    <h2>CLASE 2 - Etiquetas HTML Pt. 2</h2>
+    
+    <nav>       
+    <h2 id="inicio">Indice</h2>
+        <ul>
+            <li><a href="../index.html">Regresar a Menu Inicio</a></li>
+            <li><a href="#tablas">Tablas</a></li>
+            <li><a href="#texto">Diseño del texto</a></li>
+            <li><a href="#comodines">Caracteres Comodines</a></li>
+            <li><a href="#audio">Etiquetas Imagenes</a></li>
+        </ul>
+    </nav>
+
+    <section id="tablas">
+        <h3>Etiquetas básicas.</h3>
+        <ul>
+            <li><code>&lt;table&gt;</code> - Define toda la tabla y sirve como el contenedor del contenido.</li>
+            <li><code>&lt;tr&gt;</code> - La fila de la tabla (table row). No puede estar vacío, debe contener al menos una celda.</li>
+            <li><code>&lt;td&gt;</code> - La celda de tabla (table data). Puede ser usada solo dentro de una fila. Cada fila de la tabla debe tener el mismo número de las celdas.</li>
+        </ul>
+        <h3>Celdas de encabezado</h3>
+            <span>
+                Para crear una fila con encabezados de columnas se usa la etiqueta estándar <code>&lt;tr&gt;</code> para la fila y marcamos las celdas con una etiqueta especial <code>&lt;th&gt;</code> (table header) - que es la etiqueta semántica de la celda de encabezado. De forma predeterminada, el texto dentro de <code>&lt;th&gt;</code> se pone en negrita y se centra.
+            </span>
+        <h3>Secciones de la tabla</h3>
+            <p>Hay varias etiquetas estructurales para mejorar la semántica del marcado de la tabla.</p>
+            <ul>
+                <li><code>&lt;thead&gt;</code> - Es el membrete que envuelve un grupo de filas de tabla en el área de encabezado.</li>
+                <li><code>&lt;tbody&gt;</code> - Es el cuerpo que envuelve el grupo principal de filas de la tabla.</li>
+                <li><code>&lt;tfoot&gt;</code> - Es el sótano que denota un grupo de filas de tabla en el área del pie de página.</li>
+            </ul>
+        <h3>El título de la tabla</h3>
+            <span>
+                Si la tabla tiene un encabezado se puede marcarlo usando etiquetas de encabezado pero sería más semántico usar una etiqueta de tabla especial <code>&lt;caption&gt;</code>, que debe ubicarse como el primer elemento dentro de la tabla
+            </span>
+        <h3>Agrupación de celdas</h3>
+            <p>Para expandir una celda horizontalmente, se usa el atributo -colspan, verticalmente - rowspan.</p>
+    </section>
+    
+    <section id="texto">
+        <h3>Diseño del texto</h3>
+        <ul>
+            <li>
+                <p><b>La etiqueta <code>&lt;dl&gt;</code> (description list): </b>Es un contenedor para una lista de pares de términos y sus descripciones, es decir, es un diccionario. Para el marcado de términos hay una etiqueta dt, y para descripciones se usa la etiqueta dd</p></li>
+            <li>
+                <p><b>La etiqueta <code>&lt;span&gt;</code>: </b>Es un contenedor universal para el contenido textual pequeño, como palabras, partes de palabras o frases completas dentro de un texto. De manera similar a la etiqueta div, no tiene ningún significado semántico y se utiliza para el estilo adicional</p>
+            </li>
+            <li>
+                <p><b>La etiqueta <code>&lt;pre&gt;</code>: </b>De forma predeterminada, el navegador ignora los saltos de línea y más de un espacio en una fila. Esta etiqueta le permite agregar texto preformateado con saltos de línea forzados. Por ejemplo, marcar el texto de una canción o un poema.</p>
+            </li>
+            <li>
+                <p><b>Las etiquetas <code>&lt;sup&gt;</code> y <code>&lt;sub&gt;</code>: </b>Sirven para mostrar los símbolos en el índice superior (sup, es la abreviatura de superscript) e inferior (sub, es la abreviatura de subscript).</p>
+            </li>
+            <li>
+                <p><b>La etiqueta <code>&lt;time&gt;</code>: </b>La fecha y la hora pueden ser escritas simplemente con texto, pero es mejor usar una etiqueta especial <code>&lt;time&gt;</code>: <br>
+                <span><code >La sesión tuvo lugar en <span class="token tag" style="color: rgb(0, 0, 159);">time </span><span style="color: rgb(0, 164, 219);">datetime</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">2018-07-14T11:30</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span>11:30 por la mañana</span></code> <br>
+                El navegador solo mostrará el texto dentro de la etiqueta. La persona verá el texto comprensible y la tecnología asistencial leerá el atributo datetime y obtendrá el valor exacto en el formato deseado.</p>
+            </li>
+            <li>
+                <p><b>La etiqueta <code>&lt;address&gt;</code>: </b> Sirve para guardar la información de contacto sobre el autor de un artículo, un bloque de información o una página web en general</p>
+            </li>
+            <li>
+                <p><b>Las etiquetas <code>&lt;strong&gt;</code> y <code>&lt;b&gt;</code>: </b>Se utilizan para resaltar una palabra importante o una frase completa dentro del texto. Visualmente, ambas etiquetas hacen que el texto sea audaz y, a primera vista, no hay diferencia entre ellas, pero no es así. <br>
+                La etiqueta <code>&lt;strong&gt;</code> enfatiza semánticamente el texto como importante e indica que es una palabra o frase significativa. Por ejemplo, resaltar una advertencia o cualquier texto al que el usuario deba prestar atención en primer lugar.<br>La etiqueta <code>&lt;b&gt;</code> (es abreviatura de <b>bold</b>) hace el texto visualmente más audaz, atrae la atención pero sin darle mucha importancia.</p>
+            </li>
+            <li>
+                <p><b>Las etiquetas <code>&lt;em&gt;</code> e <code>&lt;i&gt;</code>: </b>Se utilizan para enfatizar partes del texto. Visualmente, ambas etiquetas hacen que el texto sea cursivo y, a primera vista, no hay diferencia entre ellas, pero no es así. <br>
+                La etiqueta <code>&lt;em&gt;</code> (es abreviatura de emphasis) resalta semánticamente el texto en el que se pone especial hincapié que cambia el significado de la frase. Por ejemplo, se puede asignar el sarcasmo. <br>
+                La etiqueta <code>&lt;i&gt;</code> (es abreviatura de italic) hace que el texto solo sea visualmente cursivo, atrae la atención pero sin darle mucha importancia. Por ejemplo, resaltar términos en una oración.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="comodines">
+        <h3>Los caracteres comodines</h3>
+        <ul>
+            <li>
+                No todos los caracteres pueden ser escritos en el teclado. Por ejemplo, el símbolo de marca registrada ®, del nombre comercial ™, derechos de autor © se utilizan los caracteres comodines. <br>
+                <a href="https://unicode-table.com/es/html-entities/">Tabla de Caracteres Unicode</a>
+                </li> 
+        </ul>       
+    </section>
+
+    <section id="audio">
+        <h3>Audio y vídeo</h3>
+        <ul>
+            <li><b>Vídeo: </b>Para marcar el contenido de vídeo se usa la etiqueta de relación <code>&lt;video&gt;</code><br>
+                <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">video</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">src</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">http://techslides.com/demos/sample-videos/small.webm</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">poster</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">width</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">640</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">controls</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">autoplay</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">loop</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">preload</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">auto</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);"></span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;/</span><span class="token tag" style="color: rgb(0, 0, 159);">video</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><br></span></code> <br>
+                <ul>
+                Vamos a analizar los atributos.
+                <li>src - Especifica la dirección de vídeo</li>
+                <li>poster - La dirección de la imagen que se utiliza como póster si el vídeo no se ha descargado o aún no se está reproduciendo</li>
+                <li>width y height - Establece la altura y el ancho como la imagen</li>
+                controls - Atributo comprobado, si está presente, se agregan los campos de control de vídeo</li>
+                <li>autoplay - Atributo comprobado, si está presente, la reproducción de vídeo comienza tan pronto como esté disponible</li>
+                loop - Atributo comprobado, si está presente, el vídeo se repite en un ciclo</li> <br>
+                El atributo preload señala el modo de precarga del video. Su valor afecta a la información que se cargará. El valor predeterminado depende del navegador en el que se abrió la página web.
+                <li>none - No subir videos de antemano</li>
+                <li>metadata - Cargar información oficial (duración, etc.)</li>
+                <li>auto - Cargar todos los vídeos de antemano</li>
+                </ul>
+            </li>
+            <li>
+                <p>Formatos de vídeo: No es suficiente descargar solo un formato de archivo de video porque es posible que algunos navegadores no puedan soportarlo y que el usuario no pueda ver el vídeo. Hay varios formatos de video populares que debe proporcionar al navegador para elegir: webm, mp4 y ogg. <br>
+                Para hacer esto, eliminamos el atributo src de la etiqueta <code>&lt;video&gt;</code> y agregamos una nueva etiqueta <code>&lt;source&gt;</code> para cada formato. En el atributo src especificamos la dirección del archivo de vídeo y en el atributo type el formato de vídeo. El navegador seleccionará el primero de la lista que admite y lo descargará, ignorando el resto. <br>
+                <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">video</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">poster</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">width</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">640</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">controls</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);"></span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">source</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">    </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">src</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">http://techslides.com/demos/sample-videos/small.webm</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">    </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">type</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">video/webm</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">/&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">source</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">    </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">src</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">http://techslides.com/demos/sample-videos/small.mp4</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">    </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">type</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">video/mp4</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">/&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">source</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">    </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">src</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">http://techslides.com/demos/sample-videos/small.ogg</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">    </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">type</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">video/ogg</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag" style="color: rgb(0, 0, 159);">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">/&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token plain"></span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;/</span><span class="token tag" style="color: rgb(0, 0, 159);">video</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><br></span></code></p>
+            </li>
+            <li><b>Audio: </b>Para marcar el contenido de audio, se utiliza la etiqueta de relación <code>&lt;audio&gt;</code>. Su uso es muy similar a <code>&lt;video&gt;</code>, lo único es que se puede especificar menos atributos.<br>
+                <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">audio</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">src</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">song.mp3</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">controls</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">autoplay</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">loop</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">preload</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">auto</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;/</span><span class="token tag" style="color: rgb(0, 0, 159);">audio</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><br></span></code> <br>
+                <ul>
+                    <span>
+                    Vamos a analizar los atributos.
+                    </span>
+                    <li>src - Especifica la dirección del de audio</li>
+                    <li>controls - Atributo comprobado, si está presente, se agregan controles de <li>audio</li>
+                    <li>autoplay - Atributo comprobado, si está presente, la reproducción de audio comienza tan pronto como esté disponible</li>
+                    <li>loop - Atributo comprobado, si se aplica, el audio se repite en un ciclo</li>
+                    <span>El atributo preload especifica el modo de precarga del archivo de audio. Su significado afecta a qué información se cargará. El valor predeterminado depende del navegador en el que se abrió la página web.</span>
+                    <li>none - No descargar audio de antemano</li>
+                    <li>metadata - Cargar la información oficial (duración, etc.)</li>
+                    <li>auto - Cargar de antemano todo el archivo de audio</li>
+                </ul>
+            </li>
+            <li>
+                Formatos de audio: Con el soporte de formatos en el navegador, la situación de audio es mejor. Todos los navegadores modernos están garantizados para admitir uno de los dos formatos: mp3 o ogg.
+                Al igual que con el video, eliminamos el atributo src y usamos la etiqueta <code>&lt;source&gt;</code> con los atributos src y type. <br>
+                <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">audio</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">controls</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">source</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">src</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">song.mp3</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">type</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">audio/mpeg</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">/&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;</span><span class="token tag" style="color: rgb(0, 0, 159);">source</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">src</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">song.ogg</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag attr-name" style="color: rgb(0, 164, 219);">type</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(57, 58, 52);">=</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag attr-value" style="color: rgb(227, 17, 108);">audio/ogg</span><span class="token tag attr-value punctuation" style="color: rgb(57, 58, 52);">"</span><span class="token tag" style="color: rgb(0, 0, 159);"> </span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">/&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(57, 58, 52);"><span class="token plain"></span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&lt;/</span><span class="token tag" style="color: rgb(0, 0, 159);">audio</span><span class="token tag punctuation" style="color: rgb(57, 58, 52);">&gt;</span><br></span></code>
+            </li>
+        </ul>
+    </section>
+    
 </body>
+<footer>
+    <p>
+        <a href="../index.html">Regresar</a>
+    </p>
+</footer>
 </html>
